@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #00000041;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.logo a {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+}
+
+.logo a:hover {
+    color: #007bff;
+    transition: 0.5s ease-in;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.main-hero {
+    background: url(hero-bg-light.webp);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Left Area Styling */
+.left-area {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.left-area h1 {
+    margin-top: 30%;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.left-area h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.left-area p {
+    font-size: 1rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+.left-area .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button{
+    border: 0;
+    outline: o;
+}
+
+.left-area .btn i {
+    margin-right: 10px;
+}
+
+.left-area .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Right Area Styling */
+.right-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-area img {
+    margin-top: 30%;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+
+@media (min-width: 768px) {
+    .bx-menu:before {
+        content: "\eb5f";
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    .main-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-area {
+        margin-right: 0;
+    }
+
+    .left-area h1 {
+        font-size: 2rem;
+    }
+
+    .left-area h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-area h1 {
+        font-size: 1.8rem;
+    }
+
+    .left-area h2 {
+        font-size: 1.1rem;
+    }
+
+    .left-area p {
+        font-size: 0.9rem;
+    }
+
+    .right-area img {
+        max-width: 300px;
+    }
+}

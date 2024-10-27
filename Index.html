@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Webpage title -->
+    <title>1Nonly | Landing Page</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Portion -->
+    <header>
+        <div class="logo">
+            <a href="index.html">Avni</a>
+        </div>
+        <nav>
+            <i class='bx bx-menu hamburger' onclick="toggleMenu()"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Portion -->
+    <main>
+        <div class="main-hero">
+            <div class="left-area">
+                <h1>Hi, I'm Priyanka Madhwal</h1>
+                <h2>A frontend web-developer in India.</h2>
+                <p>I specialize in creating modern and responsive websites using HTML, CSS, and JavaScript.</p>
+                <button><a href="#" class="btn"><i class='bx bx-download'></i> RESUME/CV</a></button>
+            </div>
+            <div class="right-area">
+                <img src="Hero.webp" alt="Hero-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript for Hamburger Menu Toggle -->
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('nav ul');
+            navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+
+</html>
